@@ -1,0 +1,26 @@
+object Form2: TForm2
+  Left = 349
+  Height = 329
+  Top = 174
+  Width = 406
+  Caption = 'Form2'
+  ClientHeight = 329
+  ClientWidth = 406
+  LCLVersion = '2.2.4.0'
+  object Label1: TLabel
+    Left = 29
+    Height = 15
+    Top = 32
+    Width = 115
+    Caption = 'http://110.76.152.144/'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 15
+    Top = 7
+    Width = 112
+    Caption = 'รายละเอียด  Smart 1662'
+    ParentColor = False
+  end
+end

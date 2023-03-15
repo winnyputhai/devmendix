@@ -1,0 +1,158 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 252
+  HorizontalOffset = 380
+  VerticalOffset = 185
+  Width = 533
+  object PQConnection1: TPQConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'devoph2023'
+    KeepConnection = False
+    Params.Strings = (
+      'port=5433'
+    )
+    Password = 't7%74o'
+    Transaction = SQLTransaction1
+    UserName = 'postgres'
+    HostName = 'localhost'
+    Left = 32
+    Top = 24
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'no'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'sername'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'position'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'pic'
+        DataType = ftBlob
+        Precision = -1
+      end>
+    Active = True
+    AfterPost = SQLQuery1AfterPost
+    AfterScroll = SQLQuery1AfterScroll
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select  *  from person'
+    )
+    Params = <>
+    Macros = <>
+    UpdateMode = upWhereAll
+    Left = 24
+    Top = 168
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Action = caCommitRetaining
+    Database = PQConnection1
+    Left = 352
+    Top = 96
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 32
+    Top = 88
+  end
+  object SQLDBLibraryLoader1: TSQLDBLibraryLoader
+    Enabled = False
+    Left = 352
+    Top = 24
+  end
+  object SQLTransaction2: TSQLTransaction
+    Active = True
+    Action = caCommitRetaining
+    Database = PQConnection2
+    Options = [stoUseImplicit, stoExplicitStart]
+    Left = 344
+    Top = 168
+  end
+  object SQLQuery2: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'fileid'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'filename'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'detailfilename'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'contentfile'
+        DataType = ftBlob
+        Precision = -1
+      end    
+      item
+        Name = 'datetz'
+        DataType = ftDateTime
+        Precision = -1
+      end>
+    Active = True
+    AutoCalcFields = False
+    Database = PQConnection2
+    Transaction = SQLTransaction2
+    SQL.Strings = (
+      'select  *  from filework;'
+    )
+    Params = <>
+    ParamCheck = False
+    Macros = <>
+    UpdateMode = upWhereChanged
+    Left = 136
+    Top = 168
+  end
+  object PQConnection2: TPQConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'devoph2023'
+    KeepConnection = False
+    Params.Strings = (
+      'port=5433'
+    )
+    Password = 't7%74o'
+    Transaction = SQLTransaction2
+    UserName = 'postgres'
+    HostName = 'localhost'
+    Left = 128
+    Top = 24
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLQuery2
+    Left = 128
+    Top = 88
+  end
+end

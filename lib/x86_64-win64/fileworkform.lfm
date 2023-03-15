@@ -1,0 +1,144 @@
+object Form6: TForm6
+  Left = 218
+  Height = 620
+  Top = 297
+  Width = 1024
+  Caption = 'Form6'
+  ClientHeight = 620
+  ClientWidth = 1024
+  KeyPreview = True
+  OnActivate = FormActivate
+  LCLVersion = '2.2.4.0'
+  object Button1: TButton
+    Left = 831
+    Height = 38
+    Top = 88
+    Width = 112
+    Caption = 'uploadfile'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 832
+    Height = 36
+    Top = 168
+    Width = 120
+    Caption = 'Download file'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 831
+    Height = 33
+    Top = 219
+    Width = 121
+    Caption = 'apply update'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object DBGrid1: TDBGrid
+    Left = 168
+    Height = 124
+    Top = 128
+    Width = 560
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'fileid'
+        FieldName = 'fileid'
+      end    
+      item
+        Title.Caption = 'filename'
+        Width = 200
+        FieldName = 'filename'
+      end    
+      item
+        Title.Caption = 'detailfilename'
+        FieldName = 'detailfilename'
+      end    
+      item
+        Title.Caption = 'datetz'
+        FieldName = 'datetz'
+      end>
+    DataSource = DataModule1.DataSource2
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowEditor, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisplayMemoText]
+    TabOrder = 3
+    TitleStyle = tsStandard
+    UseXORFeatures = True
+  end
+  object DBMemo1: TDBMemo
+    Left = 160
+    Height = 92
+    Top = 283
+    Width = 560
+    DataField = 'detailfilename'
+    DataSource = DataModule1.DataSource2
+    TabOrder = 4
+    WantTabs = True
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 321
+    Height = 11
+    Top = 7
+    Width = 1
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 11
+    ClientWidth = 1
+    Options = []
+    TabOrder = 5
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 248
+    Height = 52
+    Top = 32
+    Width = 355
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 52
+    ClientWidth = 355
+    DataSource = DataModule1.DataSource2
+    Options = []
+    TabOrder = 6
+  end
+  object Button4: TButton
+    Left = 831
+    Height = 52
+    Top = 283
+    Width = 117
+    Caption = 'Save change '
+    OnClick = Button4Click
+    TabOrder = 7
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 136
+    Top = 24
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 800
+    Top = 24
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    AfterPost = SQLQuery1AfterPost
+    Database = DataModule1.PQConnection2
+    Transaction = DataModule1.SQLTransaction2
+    SQL.Strings = (
+      'select *  from firework'
+    )
+    Params = <>
+    Macros = <>
+    Left = 80
+    Top = 96
+  end
+end

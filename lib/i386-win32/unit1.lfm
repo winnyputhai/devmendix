@@ -1,0 +1,172 @@
+object Form1: TForm1
+  Left = 125
+  Height = 555
+  Top = 111
+  Width = 908
+  Caption = 'งานพัฒนาระบบคอมพิวเตอร์บริการ'
+  ClientHeight = 535
+  ClientWidth = 908
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object Label1: TLabel
+    Left = 280
+    Height = 30
+    Top = 64
+    Width = 273
+    Caption = 'งานพัฒนาระบบคอมพิวเตอร์บริการ'
+    Color = clAqua
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    Transparent = False
+  end
+  object MainMenu1: TMainMenu
+    Left = 8
+    Top = 8
+    object MenuItem1: TMenuItem
+      Caption = 'ระบบงานพัฒนาระบบคอมพิวเตอร์บริการ'
+      object MenuItem2: TMenuItem
+        Caption = '1.ระบบศูนย์บริการลูกค้า (Call Center)'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = '2.ระบบงานเอกสารอิเล็กทรอนิกส์ (INFOMA)'
+      end
+      object MenuItem4: TMenuItem
+        Caption = '3.ระบบ LIMS'
+      end
+      object MenuItem6: TMenuItem
+        Caption = '4.ระบบสารสนเทศสนับสนุนการจัดการและติดตามข้อร้องเรียน (SMART 1662)'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = '5.ระบบฐานข้อมูลผู้ใช้น้ำทั่วประเทศ (BL Center)'
+      end
+      object MenuItem8: TMenuItem
+        Caption = '6.ระบบรับชำระค่าน้ำประปารวมศูนย์ตัวแทนรับชำระ (Ebill)'
+      end
+      object MenuItem9: TMenuItem
+        Caption = '7.ระบบประเมินผลการควบคุมด้วยตนเอง (CSA)'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem10: TMenuItem
+        Caption = '8.ระบบจัดเก็บข้อมูลการบริหารความต่อเนื่องทางธุรกิจ (BCM)'
+      end
+      object MenuItem11: TMenuItem
+        Caption = '10.โปรแกรมรับ-ส่งรายงานแผนและผลการบริหารความเสี่ยง '
+      end
+      object MenuItem12: TMenuItem
+        Caption = '11.ระบบเติมใจให้กัน'
+      end
+      object MenuItem13: TMenuItem
+        Caption = '12.ระบบบันทึกข้อมูลงานแผนที่ดิน'
+      end
+      object MenuItem14: TMenuItem
+        Caption = '13.ระบบตรวจสอบค่าน้ำประปาผ่านเว็บไซต์'
+      end
+      object MenuItem15: TMenuItem
+        Caption = '14.ระบบจองห้องประชุม'
+      end
+      object MenuItem16: TMenuItem
+        Caption = '15.ระบบขอใช้รถยนต์ส่วนกลาง'
+      end
+      object MenuItem17: TMenuItem
+        Caption = '16.ระบบขอใช้รถราชการ (เขต 1-10)'
+      end
+      object MenuItem18: TMenuItem
+        Caption = '17.ระบบแจ้งซ่อมสาธารณูปโภค กปภ. สำนักงานใหญ่'
+      end
+      object MenuItem19: TMenuItem
+        Caption = '18.ระบบประเมิน PWA Contact Center 1662 '
+      end
+      object MenuItem20: TMenuItem
+        Caption = '19.ระบบ PM'
+      end
+      object MenuItem21: TMenuItem
+        Caption = '20.ระบบขอออกเลขที่หนังสือ'
+      end
+      object MenuItem22: TMenuItem
+        Caption = '21.ระบบสนับสนุนห้องพยาบาล (PWAClinic)'
+      end
+      object MenuItem23: TMenuItem
+        Caption = '22.ระบบรายงานผลการใช้งานรถหน่วยงานบริการเคลื่อนที่ (PWA MOVING Mobiles)'
+      end
+      object MenuItem24: TMenuItem
+        Caption = '23.ระบบรายงานข้อมูลป้อนกลับ (FEEDBACK)'
+      end
+      object MenuItem25: TMenuItem
+        Caption = '24.ระบบรายงานสินทรัพย์ถาวรโครงการฯ'
+      end
+      object MenuItem26: TMenuItem
+        Caption = '25.ระบบจัดเก็บข้อมูลการจัดการกากตะกอน'
+      end
+      object MenuItem27: TMenuItem
+        Caption = '26.ระบบบันทึกคุณสมบัติท่อและอุปกรณ์ประปา'
+      end
+      object MenuItem28: TMenuItem
+        Caption = '27.ระบบงานบันทึกรับบริจาคอิเล็กทรอนิกส์'
+      end
+      object MenuItem29: TMenuItem
+        Caption = '28.ระบบรายงาน WSP'
+      end
+      object MenuItem30: TMenuItem
+        Caption = '29.ระบบบริหารความเสี่ยง(RM)'
+      end
+      object MenuItem31: TMenuItem
+        Caption = '30.ระบบแจ้งชำระค่าติดตั้งมาตร'
+      end
+      object MenuItem32: TMenuItem
+        Caption = '31.ระบบแจ้งชำระค่าประสานมาตร,บรรจบมาตร,ตรวจสอบมาตร'
+      end
+      object MenuItem33: TMenuItem
+        Caption = '32.ระบบ PWA Smart Queue'
+      end
+      object MenuItem35: TMenuItem
+        Caption = '33.ระบบแจ้งชำระค่าฝากมาตร'
+      end
+      object MenuItem36: TMenuItem
+        Caption = '34.ระบบแจ้งการขอยกเลิกสัญญาการใช้น้ำ'
+      end
+      object MenuItem37: TMenuItem
+        Caption = '35.ระบบแจ้งชำระเงินรายได้อื่นๆ '
+        object MenuItem34: TMenuItem
+          Caption = 'MenuItem34'
+        end
+      end
+      object MenuItem44: TMenuItem
+        Caption = '36.สุ่มมาตร online'
+      end
+      object MenuItem45: TMenuItem
+        Caption = 'MenuItem45'
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'งานจ้างบำรุงรักษา'
+      object MenuItem38: TMenuItem
+        Caption = 'ระบบศูนย์บริการลูกค้า (Call Center) (1เม.ย.- 31 มี.ค.)'
+      end
+      object MenuItem39: TMenuItem
+        Caption = 'ระบบงานเอกสารอิเล็กทรอนิกส์ (INFOMA) (17 ต.ค. - 16 ต.ค.)'
+      end
+      object MenuItem40: TMenuItem
+        Caption = 'ระบบ LIMS (1 ธ.ค. - 30 พ.ย.)'
+      end
+      object MenuItem41: TMenuItem
+        Caption = 'ระบบสารสนเทศสนับสนุนการจัดการและติดตามข้อร้องเรียน (SMART 1662)'
+      end
+    end
+    object MenuItem42: TMenuItem
+      Caption = 'บุคลากร'
+      OnClick = MenuItem42Click
+      object MenuItem43: TMenuItem
+        Caption = 'โครงสร้างบุคลากร'
+        OnClick = MenuItem43Click
+      end
+    end
+  end
+end
